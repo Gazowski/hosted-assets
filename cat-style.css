@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "ostrich_sansbold";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/ostrich-bold.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/ostrich-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/ostrich-bold.woff")
+      format("woff"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/ostrich-bold.ttf")
+      format("truetype"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/ostrich-bold.svg#ostrich_sansbold")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.loading {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.playing .loading {
+  background: rgba(0, 0, 0, 0);
+  transition: background 1s ease-in;
+}
+
+.playing #play-me {
+  display: none;
+  transition: display 0.5s ease-in;
+}
+
+#play-me {
+  background: #fff;
+  border-radius: 0.5em;
+  border: #999 solid 2px;
+  box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.2);
+  display: block;
+  font-family: "ostrich_sansbold", sans-serif;
+  font-size: 3em;
+  line-height: 1.25em;
+  margin: 100px auto 0;
+  padding: 1em 2em;
+  position: relative;
+  transition: top 0.25s ease-in, left 0.25s ease-in;
+  top: 0;
+  left: 0;
+  width: 8em;
+}
+
+.playable #play-me {
+  background: #fff url(http://stash.rachelnabors.com/24ways2012/play.png) 8em
+    1em no-repeat;
+}
+
+.playable #play-me:hover,
+.playable #play-me:active {
+  top: 0.1em;
+  left: 0.1em;
+}
+
+.playable #play-me {
+  cursor: pointer;
+}
